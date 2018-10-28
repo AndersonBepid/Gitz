@@ -1,0 +1,6 @@
+framework module Pods_Gitz {
+  umbrella header "Pods-Gitz-umbrella.h"
+
+  export *
+  module * { export * }
+}

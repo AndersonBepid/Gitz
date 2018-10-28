@@ -1,0 +1,6 @@
+framework module Pods_GitzTests {
+  umbrella header "Pods-GitzTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
