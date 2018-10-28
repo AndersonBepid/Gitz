@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qyI-kc-vho">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="sF6-St-i3K">
+            <objects>
+                <viewController id="sx1-3V-GSh" customClass="SearchViewController" customModule="Gitz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="mIp-lw-I2f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rkI-hP-XXZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N4I-z7-tJ4">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="EW6-Gl-hV0">
+                            <rect key="frame" x="16" y="7" width="343" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="FPT-CD-jip">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="githubSearch" translatesAutoresizingMaskIntoConstraints="NO" id="FPU-mG-x6k">
+                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="FPU-mG-x6k" secondAttribute="height" multiplier="1:1" id="HBl-Cs-PWV"/>
+                                            </constraints>
+                                        </imageView>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLj-yF-IKD">
+                                            <rect key="frame" x="46" y="0.0" width="297" height="30"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="wjZ-v9-0Dw"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="FPT-CD-jip" firstAttribute="leading" secondItem="EW6-Gl-hV0" secondAttribute="leading" id="AYS-wp-3BQ"/>
+                                <constraint firstAttribute="bottom" secondItem="FPT-CD-jip" secondAttribute="bottom" id="Jek-cD-eO0"/>
+                                <constraint firstItem="FPT-CD-jip" firstAttribute="top" secondItem="EW6-Gl-hV0" secondAttribute="top" id="Mha-JS-CVU"/>
+                                <constraint firstAttribute="trailing" secondItem="FPT-CD-jip" secondAttribute="trailing" id="eOs-xk-gDB"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchView" destination="EW6-Gl-hV0" id="iEB-he-Psr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vpx-cM-fgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="214.54272863568218"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ABN-D3-pWx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qyI-kc-vho" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="2vT-G6-SvC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0039215686269999999" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sx1-3V-GSh" kind="relationship" relationship="rootViewController" id="cjy-ZP-Ig5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Nh-Pn-xi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.8" y="214.54272863568218"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="githubSearch" width="205.71427917480469" height="205.71427917480469"/>
+    </resources>
+</document>

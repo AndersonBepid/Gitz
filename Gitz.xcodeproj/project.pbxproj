@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		158CA43638635145B6CEEC0C /* Pods_Gitz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEB8F56A873B1CF0EED3959 /* Pods_Gitz.framework */; };
 		A03BB6B3218559A200565471 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BB6B2218559A200565471 /* AppDelegate.swift */; };
-		A03BB6B5218559A200565471 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BB6B4218559A200565471 /* ViewController.swift */; };
-		A03BB6B8218559A200565471 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03BB6B6218559A200565471 /* Main.storyboard */; };
 		A03BB6BA218559A600565471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03BB6B9218559A600565471 /* Assets.xcassets */; };
 		A03BB6BD218559A600565471 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03BB6BB218559A600565471 /* LaunchScreen.storyboard */; };
 		A03BB6C8218559A600565471 /* GitzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BB6C7218559A600565471 /* GitzTests.swift */; };
-		A03BB6D3218559A600565471 /* GitzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03BB6D2218559A600565471 /* GitzUITests.swift */; };
+		A0E3797421860213001F0921 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E3796E21860213001F0921 /* SearchPresenter.swift */; };
+		A0E3797521860213001F0921 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E3796F21860213001F0921 /* SearchRouter.swift */; };
+		A0E3797621860213001F0921 /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E3797021860213001F0921 /* SearchModels.swift */; };
+		A0E3797721860213001F0921 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E3797121860213001F0921 /* SearchViewController.swift */; };
+		A0E3797821860213001F0921 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E3797221860213001F0921 /* SearchInteractor.swift */; };
+		A0E3797921860213001F0921 /* SearchConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E3797321860213001F0921 /* SearchConfigurator.swift */; };
+		A0E3797C21860282001F0921 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E3797B21860282001F0921 /* Search.storyboard */; };
+		A0E3797E21861479001F0921 /* UIColor+Prussianblue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E3797D21861479001F0921 /* UIColor+Prussianblue.swift */; };
+		C2060D8B212B7CE071600949 /* Pods_GitzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970398DBB7E512FA7203B187 /* Pods_GitzTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,29 +31,31 @@
 			remoteGlobalIDString = A03BB6AE218559A200565471;
 			remoteInfo = Gitz;
 		};
-		A03BB6CF218559A600565471 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A03BB6A7218559A200565471 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A03BB6AE218559A200565471;
-			remoteInfo = Gitz;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06F811028C02D23F02FDA946 /* Pods-GitzTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitzTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitzTests/Pods-GitzTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2A40DD1C73438BDAD979615A /* Pods-Gitz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gitz/Pods-Gitz.release.xcconfig"; sourceTree = "<group>"; };
+		3C96FBAFBAD2AE2ABEB6DA64 /* Pods-GitzTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitzTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitzTests/Pods-GitzTests.release.xcconfig"; sourceTree = "<group>"; };
+		970398DBB7E512FA7203B187 /* Pods_GitzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BB6AF218559A200565471 /* Gitz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BB6B2218559A200565471 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A03BB6B4218559A200565471 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A03BB6B7218559A200565471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A03BB6B9218559A600565471 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A03BB6BC218559A600565471 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A03BB6BE218559A600565471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A03BB6C3218559A600565471 /* GitzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BB6C7218559A600565471 /* GitzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitzTests.swift; sourceTree = "<group>"; };
 		A03BB6C9218559A600565471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A03BB6CE218559A600565471 /* GitzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A03BB6D2218559A600565471 /* GitzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitzUITests.swift; sourceTree = "<group>"; };
-		A03BB6D4218559A600565471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0E3796E21860213001F0921 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		A0E3796F21860213001F0921 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		A0E3797021860213001F0921 /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
+		A0E3797121860213001F0921 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A0E3797221860213001F0921 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		A0E3797321860213001F0921 /* SearchConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchConfigurator.swift; sourceTree = "<group>"; };
+		A0E3797B21860282001F0921 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		A0E3797D21861479001F0921 /* UIColor+Prussianblue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Prussianblue.swift"; sourceTree = "<group>"; };
+		D8CDAE5D4B6F4DA09A7245D3 /* Pods-Gitz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gitz/Pods-Gitz.debug.xcconfig"; sourceTree = "<group>"; };
+		DDEB8F56A873B1CF0EED3959 /* Pods_Gitz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gitz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158CA43638635145B6CEEC0C /* Pods_Gitz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,26 +71,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A03BB6CB218559A600565471 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				C2060D8B212B7CE071600949 /* Pods_GitzTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32BB0C938DE3209DB86F66B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDEB8F56A873B1CF0EED3959 /* Pods_Gitz.framework */,
+				970398DBB7E512FA7203B187 /* Pods_GitzTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76F327799B657C54875F9D68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8CDAE5D4B6F4DA09A7245D3 /* Pods-Gitz.debug.xcconfig */,
+				2A40DD1C73438BDAD979615A /* Pods-Gitz.release.xcconfig */,
+				06F811028C02D23F02FDA946 /* Pods-GitzTests.debug.xcconfig */,
+				3C96FBAFBAD2AE2ABEB6DA64 /* Pods-GitzTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A03BB6A6218559A200565471 = {
 			isa = PBXGroup;
 			children = (
 				A03BB6B1218559A200565471 /* Gitz */,
 				A03BB6C6218559A600565471 /* GitzTests */,
-				A03BB6D1218559A600565471 /* GitzUITests */,
 				A03BB6B0218559A200565471 /* Products */,
+				76F327799B657C54875F9D68 /* Pods */,
+				32BB0C938DE3209DB86F66B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,7 +114,6 @@
 			children = (
 				A03BB6AF218559A200565471 /* Gitz.app */,
 				A03BB6C3218559A600565471 /* GitzTests.xctest */,
-				A03BB6CE218559A600565471 /* GitzUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,12 +121,10 @@
 		A03BB6B1218559A200565471 /* Gitz */ = {
 			isa = PBXGroup;
 			children = (
+				A03CF26F2185EBD900EF193E /* App */,
+				A03CF2702185EBE900EF193E /* Library */,
+				A03CF2712185EC1500EF193E /* Supporting Files */,
 				A03BB6B2218559A200565471 /* AppDelegate.swift */,
-				A03BB6B4218559A200565471 /* ViewController.swift */,
-				A03BB6B6218559A200565471 /* Main.storyboard */,
-				A03BB6B9218559A600565471 /* Assets.xcassets */,
-				A03BB6BB218559A600565471 /* LaunchScreen.storyboard */,
-				A03BB6BE218559A600565471 /* Info.plist */,
 			);
 			path = Gitz;
 			sourceTree = "<group>";
@@ -116,13 +138,60 @@
 			path = GitzTests;
 			sourceTree = "<group>";
 		};
-		A03BB6D1218559A600565471 /* GitzUITests */ = {
+		A03CF26F2185EBD900EF193E /* App */ = {
 			isa = PBXGroup;
 			children = (
-				A03BB6D2218559A600565471 /* GitzUITests.swift */,
-				A03BB6D4218559A600565471 /* Info.plist */,
+				A0E3796D2185FA70001F0921 /* Scenes */,
 			);
-			path = GitzUITests;
+			path = App;
+			sourceTree = "<group>";
+		};
+		A03CF2702185EBE900EF193E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A0E3797F218614A1001F0921 /* Extensions */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		A03CF2712185EC1500EF193E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A03BB6BE218559A600565471 /* Info.plist */,
+				A03BB6BB218559A600565471 /* LaunchScreen.storyboard */,
+				A03BB6B9218559A600565471 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0E3796D2185FA70001F0921 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A0E3797A2186021D001F0921 /* Search Scene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A0E3797A2186021D001F0921 /* Search Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A0E3797B21860282001F0921 /* Search.storyboard */,
+				A0E3796E21860213001F0921 /* SearchPresenter.swift */,
+				A0E3796F21860213001F0921 /* SearchRouter.swift */,
+				A0E3797021860213001F0921 /* SearchModels.swift */,
+				A0E3797121860213001F0921 /* SearchViewController.swift */,
+				A0E3797221860213001F0921 /* SearchInteractor.swift */,
+				A0E3797321860213001F0921 /* SearchConfigurator.swift */,
+			);
+			path = "Search Scene";
+			sourceTree = "<group>";
+		};
+		A0E3797F218614A1001F0921 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0E3797D21861479001F0921 /* UIColor+Prussianblue.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A03BB6D7218559A600565471 /* Build configuration list for PBXNativeTarget "Gitz" */;
 			buildPhases = (
+				5A7CA43E1DEB17E59F11A9AF /* [CP] Check Pods Manifest.lock */,
 				A03BB6AB218559A200565471 /* Sources */,
 				A03BB6AC218559A200565471 /* Frameworks */,
 				A03BB6AD218559A200565471 /* Resources */,
+				E7271C210C918ED877F73010 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A03BB6DA218559A600565471 /* Build configuration list for PBXNativeTarget "GitzTests" */;
 			buildPhases = (
+				FFD09E942CACB6623AD69550 /* [CP] Check Pods Manifest.lock */,
 				A03BB6BF218559A600565471 /* Sources */,
 				A03BB6C0218559A600565471 /* Frameworks */,
 				A03BB6C1218559A600565471 /* Resources */,
@@ -162,24 +234,6 @@
 			productName = GitzTests;
 			productReference = A03BB6C3218559A600565471 /* GitzTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		A03BB6CD218559A600565471 /* GitzUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A03BB6DD218559A600565471 /* Build configuration list for PBXNativeTarget "GitzUITests" */;
-			buildPhases = (
-				A03BB6CA218559A600565471 /* Sources */,
-				A03BB6CB218559A600565471 /* Frameworks */,
-				A03BB6CC218559A600565471 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A03BB6D0218559A600565471 /* PBXTargetDependency */,
-			);
-			name = GitzUITests;
-			productName = GitzUITests;
-			productReference = A03BB6CE218559A600565471 /* GitzUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -195,10 +249,6 @@
 						CreatedOnToolsVersion = 10.0;
 					};
 					A03BB6C2218559A600565471 = {
-						CreatedOnToolsVersion = 10.0;
-						TestTargetID = A03BB6AE218559A200565471;
-					};
-					A03BB6CD218559A600565471 = {
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = A03BB6AE218559A200565471;
 					};
@@ -219,7 +269,6 @@
 			targets = (
 				A03BB6AE218559A200565471 /* Gitz */,
 				A03BB6C2218559A600565471 /* GitzTests */,
-				A03BB6CD218559A600565471 /* GitzUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,8 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A03BB6BD218559A600565471 /* LaunchScreen.storyboard in Resources */,
+				A0E3797C21860282001F0921 /* Search.storyboard in Resources */,
 				A03BB6BA218559A600565471 /* Assets.xcassets in Resources */,
-				A03BB6B8218559A200565471 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,22 +291,90 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A03BB6CC218559A600565471 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A7CA43E1DEB17E59F11A9AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gitz-checkManifestLockResult.txt",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		E7271C210C918ED877F73010 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gitz/Pods-Gitz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gitz/Pods-Gitz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFD09E942CACB6623AD69550 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GitzTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A03BB6AB218559A200565471 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A03BB6B5218559A200565471 /* ViewController.swift in Sources */,
+				A0E3797821860213001F0921 /* SearchInteractor.swift in Sources */,
+				A0E3797921860213001F0921 /* SearchConfigurator.swift in Sources */,
+				A0E3797E21861479001F0921 /* UIColor+Prussianblue.swift in Sources */,
+				A0E3797721860213001F0921 /* SearchViewController.swift in Sources */,
+				A0E3797521860213001F0921 /* SearchRouter.swift in Sources */,
+				A0E3797421860213001F0921 /* SearchPresenter.swift in Sources */,
 				A03BB6B3218559A200565471 /* AppDelegate.swift in Sources */,
+				A0E3797621860213001F0921 /* SearchModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,14 +386,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A03BB6CA218559A600565471 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A03BB6D3218559A600565471 /* GitzUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -285,22 +394,9 @@
 			target = A03BB6AE218559A200565471 /* Gitz */;
 			targetProxy = A03BB6C4218559A600565471 /* PBXContainerItemProxy */;
 		};
-		A03BB6D0218559A600565471 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A03BB6AE218559A200565471 /* Gitz */;
-			targetProxy = A03BB6CF218559A600565471 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A03BB6B6218559A200565471 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A03BB6B7218559A200565471 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A03BB6BB218559A600565471 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -430,11 +526,12 @@
 		};
 		A03BB6D8218559A600565471 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8CDAE5D4B6F4DA09A7245D3 /* Pods-Gitz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Gitz/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Gitz/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,11 +545,12 @@
 		};
 		A03BB6D9218559A600565471 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A40DD1C73438BDAD979615A /* Pods-Gitz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Gitz/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Gitz/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,11 +564,12 @@
 		};
 		A03BB6DB218559A600565471 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06F811028C02D23F02FDA946 /* Pods-GitzTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C458VM5GZ7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GitzTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -487,11 +586,12 @@
 		};
 		A03BB6DC218559A600565471 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C96FBAFBAD2AE2ABEB6DA64 /* Pods-GitzTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C458VM5GZ7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GitzTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -503,46 +603,6 @@
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gitz.app/Gitz";
-			};
-			name = Release;
-		};
-		A03BB6DE218559A600565471 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C458VM5GZ7;
-				INFOPLIST_FILE = GitzUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andersonoliveira.GitzUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Gitz;
-			};
-			name = Debug;
-		};
-		A03BB6DF218559A600565471 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C458VM5GZ7;
-				INFOPLIST_FILE = GitzUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andersonoliveira.GitzUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Gitz;
 			};
 			name = Release;
 		};
@@ -572,15 +632,6 @@
 			buildConfigurations = (
 				A03BB6DB218559A600565471 /* Debug */,
 				A03BB6DC218559A600565471 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A03BB6DD218559A600565471 /* Build configuration list for PBXNativeTarget "GitzUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A03BB6DE218559A600565471 /* Debug */,
-				A03BB6DF218559A600565471 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
