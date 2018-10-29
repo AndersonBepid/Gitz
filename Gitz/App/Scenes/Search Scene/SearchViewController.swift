@@ -9,6 +9,7 @@
 //  https://github.com/HelmMobile/clean-swift-templates
 
 import UIKit
+import SnapKit
 
 protocol SearchViewControllerInput {
     
@@ -22,12 +23,12 @@ class SearchViewController: UIViewController, SearchViewControllerInput {
 
     // MARK: IBOutlets
 
-    @IBOutlet weak var searchView: UIView!
     
     // MARK: Properties
 
     var output: SearchViewControllerOutput?
     var router: SearchRouter?
+    var searchView: SearchView!
     
     // MARK: Object lifecycle
     
@@ -58,12 +59,37 @@ class SearchViewController: UIViewController, SearchViewControllerInput {
     
 }
 
+// MARK: IBActions
+
+extension SearchViewController {
+    
+    @IBAction func tapDismissKeyboard(_ sender: UITapGestureRecognizer) {
+        searchView.endEditing(true)
+    }
+}
+
 // MARK: Setup Style
 
 extension SearchViewController {
 
     private func setupStyle() {
-        searchView.frame.size.width = view.frame.width
+       setupSearchBar()
+    }
+
+    private func setupSearchBar() {
+        let bundle = Bundle.main
+        let nib = bundle.loadNibNamed("SearchView", owner: nil, options: nil)?.first
+        guard let searchNib = nib as? SearchView, let navBar = navigationController?.navigationBar else {
+            return
+        }
+        searchView = searchNib
+        navBar.insertSubview(searchView, at: navBar.subviews.endIndex)
+        searchView.snp.makeConstraints { (make) in
+            make.leadingMargin.equalTo(navBar).offset(16)
+            make.trailingMargin.equalTo(navBar).offset(-16)
+            make.topMargin.equalTo(navBar).offset(8)
+            make.bottomMargin.equalTo(navBar).offset(-8)
+        }
     }
 }
 
