@@ -13,11 +13,11 @@
         <scene sceneID="sF6-St-i3K">
             <objects>
                 <viewController id="sx1-3V-GSh" customClass="SearchViewController" customModule="Gitz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="mIp-lw-I2f">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="mIp-lw-I2f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Lj-vp-gU5">
+                            <containerView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Lj-vp-gU5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <connections>
                                     <segue destination="9wK-48-xhT" kind="embed" identifier="RepositoryScene" id="1ub-zy-vmM"/>
@@ -34,7 +34,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rkI-hP-XXZ"/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="7L6-vZ-bLS" appends="YES" id="hYn-Lq-lQa"/>
+                            <outletCollection property="gestureRecognizers" destination="biG-gR-JWr" appends="YES" id="Qtp-HF-Y7M"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="N4I-z7-tJ4">
@@ -42,11 +42,11 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpx-cM-fgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="7L6-vZ-bLS">
+                <swipeGestureRecognizer direction="down" id="biG-gR-JWr">
                     <connections>
-                        <action selector="tapDismissKeyboard:" destination="sx1-3V-GSh" id="VYU-3r-76v"/>
+                        <action selector="swipeDismissKeyboard:" destination="sx1-3V-GSh" id="m8M-Ft-BqT"/>
                     </connections>
-                </tapGestureRecognizer>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1044" y="214.54272863568218"/>
         </scene>

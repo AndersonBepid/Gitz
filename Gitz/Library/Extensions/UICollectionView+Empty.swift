@@ -1,9 +1,9 @@
 //
-//  UITableView+.swift
-//  FastTrade
+//  UICollectionView+Empty.swift
+//  Gitz
 //
-//  Created by cedro_nds on 03/07/2018.
-//  Copyright © 2018 Cedro Technologies. All rights reserved.
+//  Created by Anderson Oliveira on 28/10/18.
+//  Copyright (c) 2018 Anderson Oliveira. All rights reserved.
 //
 
 import Foundation

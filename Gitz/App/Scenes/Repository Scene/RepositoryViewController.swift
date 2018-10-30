@@ -16,6 +16,7 @@ protocol RepositoryViewControllerInput {
 
 protocol RepositoryViewControllerOutput {
     func searchRepository(request: RepositoryScene.SearchRepository.Request)
+    func selectRepository(request: RepositoryScene.SelectRepository.Request)
 }
 
 class RepositoryViewController: UIViewController, RepositoryViewControllerInput {

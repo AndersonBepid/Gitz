@@ -14,7 +14,7 @@ struct Repository: Decodable {
     let name: String?
     let owner: Owner?
     let description: String?
-    let dateCreate: String?
+    let dateCreation: String?
     let stargazers: Int?
     let watchers: Int?
     let forks: Int?
@@ -24,9 +24,9 @@ struct Repository: Decodable {
         case name = "name"
         case owner = "owner"
         case description = "description"
-        case dateCreate = "created_at"
+        case dateCreation = "created_at"
         case stargazers = "stargazers_count"
-        case watchers = "watchers_count"
-        case forks = "forks_count"
+        case watchers = "watchers"
+        case forks = "forks"
     }
 }

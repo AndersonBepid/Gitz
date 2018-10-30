@@ -31,4 +31,15 @@ struct RepositoryScene {
             let state: State
         }
     }
+
+    struct SelectRepository {
+
+        struct Request {
+            let selectedRepository: Repository
+        }
+        
+        struct Response {
+            let repository: Repository!
+        }
+    }
 }

@@ -10,6 +10,7 @@
 
 protocol RepositoryInteractorInput {
     func searchRepository(request: RepositoryScene.SearchRepository.Request)
+    func selectRepository(request: RepositoryScene.SelectRepository.Request)
 }
 
 protocol RepositoryInteractorOutput {
@@ -17,7 +18,7 @@ protocol RepositoryInteractorOutput {
 }
 
 protocol RepositoryDataSource {
-    
+    var selectedRepository: Repository! { get }
 }
 
 protocol RepositoryDataDestination {
@@ -28,7 +29,8 @@ class RepositoryInteractor: RepositoryInteractorInput, RepositoryDataSource, Rep
     
     var output: RepositoryInteractorOutput?
     let searchAssetWorker: SearchAssetWorker = SearchAssetWorker.singleton
-    
+    var selectedRepository: Repository!
+
     // MARK: Business logic
 
     func searchRepository(request: RepositoryScene.SearchRepository.Request) {
@@ -37,6 +39,17 @@ class RepositoryInteractor: RepositoryInteractorInput, RepositoryDataSource, Rep
         }
     }
 
+    // MARK: Select
+
+    func selectRepository(request: RepositoryScene.SelectRepository.Request) {
+        selectedRepository = request.selectedRepository
+    }
+}
+
+// MARK: Output
+
+extension RepositoryInteractor {
+    
     func presentSearchResult(result: InteractorResult<SearchResults>) {
         let reponse = RepositoryScene.SearchRepository.Response(result: result)
         output?.presentSearchResult(response: reponse)

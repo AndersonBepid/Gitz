@@ -24,10 +24,7 @@ class SearchAssetWorker {
         let request = URLRequest(url: url)
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {
-                completion(.failure(error!))
-                return
-            }
+            guard let data = data, error == nil else { return }
             do {
                 let searchResultRepository = try JSONDecoder().decode(SearchResultRepository.self, from: data)
                 completion(.success(searchResultRepository.repositories))

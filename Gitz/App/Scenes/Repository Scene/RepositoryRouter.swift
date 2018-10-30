@@ -15,7 +15,7 @@ protocol RepositoryRouterInput {
 }
 
 protocol RepositoryRouterDataSource: class {
-    
+    var selectedRepository: Repository! { get }
 }
 
 protocol RepositoryRouterDataDestination: class {
@@ -23,7 +23,11 @@ protocol RepositoryRouterDataDestination: class {
 }
 
 class RepositoryRouter: RepositoryRouterInput {
-    
+
+    struct SegueIdentifiers {
+        static let repositoryDetail = "RepositoryDetailScene"
+    }
+
     weak var viewController: RepositoryViewController!
     weak private var dataSource: RepositoryRouterDataSource!
     weak var dataDestination: RepositoryRouterDataDestination!
@@ -35,11 +39,26 @@ class RepositoryRouter: RepositoryRouterInput {
     }
     
     // MARK: Navigation
-    
+
+    func navigateToRepositoryDetailScene() {
+        viewController.performSegue(withIdentifier: SegueIdentifiers.repositoryDetail, sender: self)
+    }
+
     // MARK: Communication
     
     func passDataToNextScene(for segue: UIStoryboardSegue) {
         // NOTE: Teach the router which scenes it can communicate with
-        
+        switch segue.identifier {
+        case SegueIdentifiers.repositoryDetail:
+            passDataToRepositoryDetailScene(segue)
+        default:
+            break
+        }
+    }
+
+    func passDataToRepositoryDetailScene(_ segue: UIStoryboardSegue) {
+        if let repositoryDetailViewController  = segue.destination as? RepositoryDetailViewController {
+            repositoryDetailViewController.router?.dataDestination.repository = dataSource.selectedRepository
+        }
     }
 }

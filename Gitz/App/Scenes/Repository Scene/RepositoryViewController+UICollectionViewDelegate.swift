@@ -18,4 +18,10 @@ extension RepositoryViewController: UICollectionViewDelegateFlowLayout {
         let sizeCell = CGSize(width: view.frame.width * 0.9, height: 90.0)
         return sizeCell
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let request = RepositoryScene.SelectRepository.Request(selectedRepository: repositories[indexPath.item])
+        output?.selectRepository(request: request)
+        router?.navigateToRepositoryDetailScene()
+    }
 }

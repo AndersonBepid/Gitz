@@ -63,7 +63,7 @@ class SearchViewController: UIViewController, SearchViewControllerInput {
 
 extension SearchViewController {
     
-    @IBAction func tapDismissKeyboard(_ sender: UITapGestureRecognizer) {
+    @IBAction func swipeDismissKeyboard(_ sender: UISwipeGestureRecognizer) {
         searchView.endEditing(true)
     }
 }

@@ -1,5 +1,9 @@
-//  Created by Thiago Vinhote on 25/01/17.
-//  Copyright © 2017 Thiago Vinhote. All rights reserved.
+//
+//  UIImageView+Download.swift
+//  Gitz
+//
+//  Created by Anderson Oliveira on 28/10/18.
+//  Copyright (c) 2018 Anderson Oliveira. All rights reserved.
 //
 
 import UIKit

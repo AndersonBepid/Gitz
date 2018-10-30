@@ -1,9 +1,9 @@
 //
-//  EnviromentURL.swift
-//  FastTrade
+//  AppEnviroment.swift
+//  Gitz
 //
-//  Created by usuario on 27/09/18.
-//  Copyright © 2018 Cedro Technologies. All rights reserved.
+//  Created by Anderson Oliveira on 28/10/18.
+//  Copyright (c) 2018 Anderson Oliveira. All rights reserved.
 //
 
 import Foundation

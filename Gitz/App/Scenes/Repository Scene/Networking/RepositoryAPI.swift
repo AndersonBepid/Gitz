@@ -1,9 +1,9 @@
 //
-//  QuotesAPI.swift
-//  FastTrade
+//  RepositoryAPI.swift
+//  Gitz
 //
-//  Created by usuario on 02/08/18.
-//  Copyright © 2018 Cedro Technologies. All rights reserved.
+//  Created by Anderson Oliveira on 28/10/18.
+//  Copyright © 2018 Anderson Oliveira. All rights reserved.
 //
 
 import Foundation

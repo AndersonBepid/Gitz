@@ -49,10 +49,19 @@
                     <connections>
                         <outlet property="collectionView" destination="5hp-mo-KHe" id="3oD-Dz-qFG"/>
                         <outlet property="loadingActivityIndicator" destination="R4d-OR-F1Z" id="jRs-yO-das"/>
+                        <segue destination="VDw-n1-8Ee" kind="presentation" identifier="RepositoryDetailScene" modalTransitionStyle="crossDissolve" id="b1o-Lj-D2H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3VJ-oy-K3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--RepositoryDetail-->
+        <scene sceneID="jQy-aV-K3z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RepositoryDetail" id="VDw-n1-8Ee" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GP7-JW-JJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="26"/>
         </scene>
     </scenes>
 </document>
