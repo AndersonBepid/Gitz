@@ -10,9 +10,9 @@ import Foundation
 
 typealias SearchResults = [Repository]
 
-class SearchAssetWorker {
+class RepositoryWorker {
 
-    static let singleton = SearchAssetWorker()
+    static let singleton = RepositoryWorker()
 
     func search(input: String, _ completion: @escaping (_ searchResults: InteractorResult<SearchResults>) -> Void) {
         let repositoryAPI = RepositoryAPI.repositoryQuery(searchTerm: input)
@@ -29,7 +29,7 @@ class SearchAssetWorker {
                 let searchResultRepository = try JSONDecoder().decode(SearchResultRepository.self, from: data)
                 completion(.success(searchResultRepository.repositories))
             } catch {
-                completion(.failure(error))
+                completion(.failure(error as NSError))
             }
         }
         task.resume()

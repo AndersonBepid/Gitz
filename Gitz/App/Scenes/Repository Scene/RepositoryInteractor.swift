@@ -28,9 +28,13 @@ protocol RepositoryDataDestination {
 class RepositoryInteractor: RepositoryInteractorInput, RepositoryDataSource, RepositoryDataDestination {
     
     var output: RepositoryInteractorOutput?
-    let searchAssetWorker: SearchAssetWorker = SearchAssetWorker.singleton
+    var searchAssetWorker: RepositoryWorker = RepositoryWorker.singleton
     var selectedRepository: Repository!
 
+    init(searchAssetWorker: RepositoryWorker = RepositoryWorker.singleton) {
+        self.searchAssetWorker = searchAssetWorker
+    }
+    
     // MARK: Business logic
 
     func searchRepository(request: RepositoryScene.SearchRepository.Request) {

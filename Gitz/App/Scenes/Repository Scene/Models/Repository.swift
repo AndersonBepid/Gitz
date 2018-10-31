@@ -30,3 +30,10 @@ struct Repository: Decodable {
         case forks = "forks"
     }
 }
+
+extension Repository: Equatable {
+
+    static func == (lhs: Repository, rhs: Repository) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
