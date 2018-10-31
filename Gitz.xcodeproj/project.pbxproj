@@ -30,6 +30,7 @@
 		A08082BD2187EF200089A3FF /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08082B72187EF200089A3FF /* RepositoryDetailViewController.swift */; };
 		A08082BE2187EF200089A3FF /* RepositoryDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08082B82187EF200089A3FF /* RepositoryDetailInteractor.swift */; };
 		A08082BF2187EF200089A3FF /* RepositoryDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08082B92187EF200089A3FF /* RepositoryDetailConfigurator.swift */; };
+		A08082C2218936030089A3FF /* scroll.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08082C1218936030089A3FF /* scroll.xib */; };
 		A0C9FE612186224200C3FA11 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0C9FE602186224200C3FA11 /* SearchView.xib */; };
 		A0C9FE63218622DF00C3FA11 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9FE62218622DF00C3FA11 /* SearchView.swift */; };
 		A0C9FE6B218640BA00C3FA11 /* RepositoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C9FE65218640BA00C3FA11 /* RepositoryPresenter.swift */; };
@@ -94,6 +95,7 @@
 		A08082B72187EF200089A3FF /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
 		A08082B82187EF200089A3FF /* RepositoryDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailInteractor.swift; sourceTree = "<group>"; };
 		A08082B92187EF200089A3FF /* RepositoryDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailConfigurator.swift; sourceTree = "<group>"; };
+		A08082C1218936030089A3FF /* scroll.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = scroll.xib; sourceTree = "<group>"; };
 		A0C9FE602186224200C3FA11 /* SearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
 		A0C9FE62218622DF00C3FA11 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		A0C9FE65218640BA00C3FA11 /* RepositoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryPresenter.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				A08082B72187EF200089A3FF /* RepositoryDetailViewController.swift */,
 				A08082B82187EF200089A3FF /* RepositoryDetailInteractor.swift */,
 				A08082B92187EF200089A3FF /* RepositoryDetailConfigurator.swift */,
+				A08082C1218936030089A3FF /* scroll.xib */,
 			);
 			path = "Repository Detail Scene";
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 			files = (
 				A0C9FE612186224200C3FA11 /* SearchView.xib in Resources */,
 				A08082B32187EDC50089A3FF /* RepositoryDetail.storyboard in Resources */,
+				A08082C2218936030089A3FF /* scroll.xib in Resources */,
 				A0C9FE722186412400C3FA11 /* Repository.storyboard in Resources */,
 				A03BB6BD218559A600565471 /* LaunchScreen.storyboard in Resources */,
 				A0C9FE7921864D2500C3FA11 /* RepositoryCell.xib in Resources */,

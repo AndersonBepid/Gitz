@@ -25,6 +25,11 @@ struct RepositoryDetailScene {
             let usermane: String
             let type: String
             let since: String
+            let repositoryName: String
+            let watchers: String
+            let stargazers: String
+            let forks: String
+            let description: String
         }
     }
 }

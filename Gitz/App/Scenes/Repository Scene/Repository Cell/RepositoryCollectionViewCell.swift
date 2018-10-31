@@ -13,7 +13,7 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
     // MARK: IBOutlets
 
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var repositoryImageView: UIImageView!
+    @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var repositoryNameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var watchersLabel: UILabel!
@@ -31,7 +31,7 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
 extension RepositoryCollectionViewCell {
 
     private func setupStyle() {
-        repositoryImageView.layer.cornerRadius = repositoryImageView.frame.height / 2.0
+        userImageView.layer.cornerRadius = userImageView.frame.height / 2.0
         containerView.layer.cornerRadius = 8.0
         dropShadow(radius: 8.0)
     }
@@ -46,7 +46,7 @@ extension RepositoryCollectionViewCell {
         stargazersLabel.text = formatter(value: repository.stargazers)
         forksLabel.text = formatter(value: repository.forks)
         guard let urlImageString = repository.owner?.avatar else { return }
-        repositoryImageView.loadImageUsingCache(withUrlString: urlImageString, defaultImage: #imageLiteral(resourceName: "github"), loadingActivityIndicatorStyle: .white)
+        userImageView.loadImageUsingCache(withUrlString: urlImageString, defaultImage: #imageLiteral(resourceName: "github"), loadingActivityIndicatorStyle: .white)
     }
 
     private func formatter(value: Int?) -> String {

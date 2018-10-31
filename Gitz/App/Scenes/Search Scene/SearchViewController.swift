@@ -41,10 +41,6 @@ class SearchViewController: UIViewController, SearchViewControllerInput {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         setupStyle()
     }
 

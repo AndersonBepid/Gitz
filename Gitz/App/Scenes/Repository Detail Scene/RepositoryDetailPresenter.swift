@@ -26,12 +26,28 @@ class RepositoryDetailPresenter: RepositoryDetailPresenterInput {
         guard let imageUrl = response.repository.owner?.avatar,
               let username = response.repository.owner?.name,
               let type = response.repository.owner?.type,
-              let since = response.repository.dateCreation
+              let since = response.repository.dateCreation,
+              let name = response.repository.name
         else { return }
+        let watchers = formatter(value: response.repository.watchers)
+        let stargazers = formatter(value: response.repository.stargazers)
+        let forks = formatter(value: response.repository.forks)
+        let description = response.repository.description ?? "No description."
+
         let viewModel = RepositoryDetailScene.SelectedRepository.ViewModel(imageUrl: imageUrl,
                                                                            usermane: username,
                                                                            type: type,
-                                                                           since: since)
+                                                                           since: since,
+                                                                           repositoryName: name,
+                                                                           watchers: watchers,
+                                                                           stargazers: stargazers,
+                                                                           forks: forks,
+                                                                           description: description)
         output?.displaySelectedRepository(viewModel: viewModel)
+    }
+
+    private func formatter(value: Int?) -> String {
+        guard let value = value else { return "--" }
+        return String(value)
     }
 }

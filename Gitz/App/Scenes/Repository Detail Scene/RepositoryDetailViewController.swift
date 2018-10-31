@@ -27,6 +27,13 @@ class RepositoryDetailViewController: UIViewController, RepositoryDetailViewCont
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var repositoryNameLabel: UILabel!
+    @IBOutlet weak var watchersLabel: UILabel!
+    @IBOutlet weak var stargazersLabel: UILabel!
+    @IBOutlet weak var forksLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionScrollView: UIScrollView!
+    
     
     // MARK: Properties
 
@@ -46,6 +53,7 @@ class RepositoryDetailViewController: UIViewController, RepositoryDetailViewCont
         super.viewDidLoad()
         setupStyle()
         selectedRepository()
+        setupScroll()
     }
 
     // MARK: Requests
@@ -61,7 +69,12 @@ class RepositoryDetailViewController: UIViewController, RepositoryDetailViewCont
         profileImageView.loadImageUsingCache(withUrlString: viewModel.imageUrl, defaultImage: #imageLiteral(resourceName: "github"), loadingActivityIndicatorStyle: .white)
         usernameLabel.text = viewModel.usermane
         typeLabel.text = viewModel.type
-        print("Date: " + viewModel.since)
+        repositoryNameLabel.text = viewModel.repositoryName
+        watchersLabel.text = viewModel.watchers
+        stargazersLabel.text = viewModel.stargazers
+        forksLabel.text = viewModel.forks
+        descriptionLabel.text = viewModel.description
+        print(viewModel.since)
     }
 }
 
@@ -84,6 +97,16 @@ extension RepositoryDetailViewController {
         headerView.dropShadow(opacity: 3.0, radius: 8.0)
         headerView.layer.cornerRadius = 20.0
         headerView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+    }
+}
+
+extension RepositoryDetailViewController: UIScrollViewDelegate {
+
+    private func setupScroll() {
+        let boundsView = UIScreen.main.bounds
+
+        descriptionScrollView.contentSize = CGSize(width: boundsView.width, height: 30.0)
+        descriptionScrollView.delegate = self
     }
 }
 
