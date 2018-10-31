@@ -86,6 +86,7 @@ extension SearchViewController {
             make.topMargin.equalTo(navBar).offset(8)
             make.bottomMargin.equalTo(navBar).offset(-8)
         }
+        searchView.backgroundColor = .clear
     }
 }
 
