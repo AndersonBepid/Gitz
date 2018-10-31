@@ -15,10 +15,6 @@ enum RepositoryAPI {
 
 extension RepositoryAPI {
 
-    var baseURL: URL {
-        return URL(string: AppEnviroment.gitz.workspacesURL)!
-    }
-
     var path: String {
         switch self {
         case .initialRepositories: return "/repositories"

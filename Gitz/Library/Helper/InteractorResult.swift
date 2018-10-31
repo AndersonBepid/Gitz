@@ -10,12 +10,7 @@ import Foundation
 
 enum InteractorResult<Resource> {
     case success(Resource)
-    case failure(Error)
-}
-
-enum InteractorCompletableResult {
-    case completed
-    case failure(Error)
+    case failure(NSError)
 }
 
 extension InteractorResult {
