@@ -10,7 +10,7 @@ import Foundation
 
 enum RepositoryAPI {
     case initialRepositories
-    case repositoryQuery(searchTerm: String)
+    case repositoryQuery(searchTerm: String, page: String)
 }
 
 extension RepositoryAPI {
@@ -30,8 +30,8 @@ extension RepositoryAPI {
         switch self {
         case .initialRepositories:
             return []
-        case .repositoryQuery(let searchTerm):
-            return [URLQueryItem(name: "q", value: searchTerm)]
+        case .repositoryQuery(let searchTerm, let page):
+            return [URLQueryItem(name: "q", value: searchTerm), URLQueryItem(name: "page", value: page)]
         }
     }
 }

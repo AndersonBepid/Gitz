@@ -11,7 +11,7 @@ import Foundation
 struct SearchResultRepository: Decodable {
 
     let amount: Int?
-    let repositories: [Repository]
+    let repositories: SearchResults
 
     enum CodingKeys: String, CodingKey {
         case amount = "total_count"

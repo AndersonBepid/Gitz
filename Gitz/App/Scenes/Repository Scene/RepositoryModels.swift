@@ -16,15 +16,16 @@ struct RepositoryScene {
 
         struct Request {
             let searchTerm: String
+            let page: Int
         }
         
         struct Response {
-            let result: InteractorResult<SearchResults>
+            let result: InteractorResult<SearchResultRepository>
         }
         
         struct ViewModel {
             enum State {
-                case success(searchResults: [Repository])
+                case success(searchResults: SearchResultRepository)
                 case failure(errorMessage: String)
             }
 

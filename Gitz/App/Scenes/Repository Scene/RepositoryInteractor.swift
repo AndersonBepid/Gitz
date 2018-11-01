@@ -38,8 +38,8 @@ class RepositoryInteractor: RepositoryInteractorInput, RepositoryDataSource, Rep
     // MARK: Business logic
 
     func searchRepository(request: RepositoryScene.SearchRepository.Request) {
-        searchAssetWorker.search(input: request.searchTerm) { (searchResult) in
-            self.presentSearchResult(result: searchResult)
+        searchAssetWorker.search(input: request.searchTerm, page: String(request.page)) { (searchResultRepository) in
+            self.presentSearchResult(result: searchResultRepository)
         }
     }
 
@@ -54,7 +54,7 @@ class RepositoryInteractor: RepositoryInteractorInput, RepositoryDataSource, Rep
 
 extension RepositoryInteractor {
     
-    func presentSearchResult(result: InteractorResult<SearchResults>) {
+    func presentSearchResult(result: InteractorResult<SearchResultRepository>) {
         let reponse = RepositoryScene.SearchRepository.Response(result: result)
         output?.presentSearchResult(response: reponse)
     }

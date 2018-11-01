@@ -25,8 +25,8 @@ class RepositoryPresenter: RepositoryPresenterInput {
     func presentSearchResult(response: RepositoryScene.SearchRepository.Response) {
         let viewModel: RepositoryScene.SearchRepository.ViewModel!
         switch response.result {
-        case .success(let repositories):
-            viewModel = RepositoryScene.SearchRepository.ViewModel(state: .success(searchResults: repositories))
+        case .success(let searchResultRepository):
+            viewModel = RepositoryScene.SearchRepository.ViewModel(state: .success(searchResults: searchResultRepository))
         case .failure(let error):
             viewModel = RepositoryScene.SearchRepository.ViewModel(state: .failure(errorMessage: error.localizedDescription))
         }

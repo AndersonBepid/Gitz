@@ -33,6 +33,10 @@ class RepositoryViewController: UIViewController, RepositoryViewControllerInput 
     var output: RepositoryViewControllerOutput?
     var router: RepositoryRouter?
     var repositories: [Repository] = []
+    var searchTerm = "a"
+    var page = 1
+    var isGetRepository = false
+    var hasMorePages = false
 
     // MARK: Object lifecycle
 
@@ -58,18 +62,21 @@ class RepositoryViewController: UIViewController, RepositoryViewControllerInput 
     // MARK: Requests
 
     private func initialSearch() {
-        searchRepositories("a")
+        searchRepositories(searchTerm)
     }
 
     private func searchRepositories(_ searchTerm: String) {
-        let request = RepositoryScene.SearchRepository.Request(searchTerm: searchTerm)
+        let request = RepositoryScene.SearchRepository.Request(searchTerm: searchTerm, page: page)
         loadingActivityIndicator.startAnimating()
         clearList()
+        self.searchTerm = searchTerm
+        isGetRepository = true
         output?.searchRepository(request: request)
     }
 
     @objc private func searchRepositoriesObservable(_ sender: Notification) {
         guard let searchTerm = sender.object as? String else { return }
+        page = 1
         searchRepositories(searchTerm)
     }
 
@@ -77,11 +84,14 @@ class RepositoryViewController: UIViewController, RepositoryViewControllerInput 
 
     func displaySearchResult(viewModel: RepositoryScene.SearchRepository.ViewModel) {
         switch viewModel.state {
-        case .success(let repositories):
+        case .success(let searchResultRepository):
+            // TO DO: Remove Force
+            hasMorePages = searchResultRepository.amount! > (page * 30)
             DispatchQueue.main.async {
-                for (index, repository) in repositories.enumerated() {
+                for (index, repository) in searchResultRepository.repositories.enumerated() {
                     self.repositories.append(repository)
-                    let indexPath = IndexPath(item: index, section: 0)
+                    let indexItem = (index + ((self.page - 1) * 30))
+                    let indexPath = IndexPath(item: indexItem, section: 0)
                     self.collectionView.insertItems(at: [indexPath])
                 }
                 self.has(repositories: self.repositories)
@@ -116,11 +126,14 @@ extension RepositoryViewController {
     }
 
     private func clearList() {
-        repositories = []
-        collectionView.reloadData()
+        if page == 1 {
+            repositories = []
+            collectionView.reloadData()
+        }
     }
 
     private func has(repositories: [Repository]) {
+        isGetRepository = false
         if repositories.isEmpty {
             DispatchQueue.main.async {
                 self.collectionView.setEmptyMessage("No results found.")
@@ -134,6 +147,24 @@ extension RepositoryViewController {
     private func registerCells() {
         let cellNib = UINib(nibName: "RepositoryCell", bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: RepositoryViewController.cellIdentifier)
+    }
+}
+
+// MARK: Scroll Delegate
+
+extension RepositoryViewController: UIScrollViewDelegate {
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if hasMorePages && !isGetRepository {
+            let indexes = collectionView.indexPathsForVisibleItems.map { $0.item }
+            let lastButThree = repositories.endIndex - 3
+            if indexes.contains(lastButThree) { getMoreRepositories() }
+        }
+    }
+
+    func getMoreRepositories() {
+        page += 1
+        searchRepositories(searchTerm)
     }
 }
 
