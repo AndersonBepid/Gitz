@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mus-1a-IUB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repository View Controller-->
+        <scene sceneID="vov-Q0-5Sg">
+            <objects>
+                <viewController id="mus-1a-IUB" customClass="RepositoryViewController" customModule="Gitz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="WrA-cT-Fcf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5hp-mo-KHe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="l3k-gH-T30">
+                                    <size key="itemSize" width="338" height="70"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mus-1a-IUB" id="5Ok-89-wNi"/>
+                                    <outlet property="delegate" destination="mus-1a-IUB" id="iHg-Ms-y2Q"/>
+                                </connections>
+                            </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="R4d-OR-F1Z">
+                                <rect key="frame" x="169" y="36" width="37" height="37"/>
+                                <color key="color" red="0.0039215686269999999" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="5hp-mo-KHe" firstAttribute="top" secondItem="WrA-cT-Fcf" secondAttribute="top" id="3Nv-31-4Rp"/>
+                            <constraint firstItem="R4d-OR-F1Z" firstAttribute="top" secondItem="pYv-zg-dMt" secondAttribute="top" constant="16" id="DeX-Qd-Z1X"/>
+                            <constraint firstItem="5hp-mo-KHe" firstAttribute="leading" secondItem="pYv-zg-dMt" secondAttribute="leading" id="aYW-us-Iy6"/>
+                            <constraint firstItem="R4d-OR-F1Z" firstAttribute="centerX" secondItem="pYv-zg-dMt" secondAttribute="centerX" id="mc5-cf-Zwu"/>
+                            <constraint firstItem="pYv-zg-dMt" firstAttribute="trailing" secondItem="5hp-mo-KHe" secondAttribute="trailing" id="q5g-LZ-MST"/>
+                            <constraint firstAttribute="bottom" secondItem="5hp-mo-KHe" secondAttribute="bottom" id="riE-ii-t57"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pYv-zg-dMt"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="5hp-mo-KHe" id="3oD-Dz-qFG"/>
+                        <outlet property="loadingActivityIndicator" destination="R4d-OR-F1Z" id="jRs-yO-das"/>
+                        <segue destination="VDw-n1-8Ee" kind="presentation" identifier="RepositoryDetailScene" modalTransitionStyle="crossDissolve" id="b1o-Lj-D2H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3VJ-oy-K3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--RepositoryDetail-->
+        <scene sceneID="jQy-aV-K3z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RepositoryDetail" id="VDw-n1-8Ee" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GP7-JW-JJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="26"/>
+        </scene>
+    </scenes>
+</document>

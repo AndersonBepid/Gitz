@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qyI-kc-vho">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="sF6-St-i3K">
+            <objects>
+                <viewController id="sx1-3V-GSh" customClass="SearchViewController" customModule="Gitz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="mIp-lw-I2f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Lj-vp-gU5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <connections>
+                                    <segue destination="9wK-48-xhT" kind="embed" identifier="RepositoryScene" id="1ub-zy-vmM"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="rkI-hP-XXZ" firstAttribute="bottom" secondItem="6Lj-vp-gU5" secondAttribute="bottom" id="40v-BE-fc4"/>
+                            <constraint firstItem="6Lj-vp-gU5" firstAttribute="leading" secondItem="rkI-hP-XXZ" secondAttribute="leading" id="eHr-3U-mrN"/>
+                            <constraint firstItem="rkI-hP-XXZ" firstAttribute="trailing" secondItem="6Lj-vp-gU5" secondAttribute="trailing" id="huQ-KW-JRh"/>
+                            <constraint firstItem="6Lj-vp-gU5" firstAttribute="top" secondItem="rkI-hP-XXZ" secondAttribute="top" id="mby-Zj-4pq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rkI-hP-XXZ"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="biG-gR-JWr" appends="YES" id="Qtp-HF-Y7M"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="N4I-z7-tJ4">
+                        <nil key="title"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vpx-cM-fgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="biG-gR-JWr">
+                    <connections>
+                        <action selector="swipeDismissKeyboard:" destination="sx1-3V-GSh" id="m8M-Ft-BqT"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1044" y="214.54272863568218"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ABN-D3-pWx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qyI-kc-vho" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="2vT-G6-SvC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0039215686269999999" green="0.2156862745" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sx1-3V-GSh" kind="relationship" relationship="rootViewController" id="cjy-ZP-Ig5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Nh-Pn-xi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.8" y="214.54272863568218"/>
+        </scene>
+        <!--Repository-->
+        <scene sceneID="yaQ-7a-iQu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Repository" id="9wK-48-xhT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SOW-lp-LLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1683" y="214"/>
+        </scene>
+    </scenes>
+</document>
